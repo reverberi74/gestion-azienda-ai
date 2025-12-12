@@ -29,8 +29,7 @@ MySQL / MariaDB (DB: gestion_azienda_ai)
 
 Setup rapido (dev)
 1. Service AI
-bash
-Copia codice
+
 cd service-ai
 
 # (se non esiste ancora il venv)
@@ -48,8 +47,7 @@ GET http://127.0.0.1:8001/v1/health
 GET http://127.0.0.1:8001/v1/ai/mock-chat (endpoint mock AI)
 
 2. Laravel server
-bash
-Copia codice
+
 cd server
 
 # .env già copiato da .env.example e DB configurato:
@@ -66,8 +64,7 @@ GET http://127.0.0.1:8000/api/v1/health
 GET http://127.0.0.1:8000/api/health/ai (bridge verso service-ai)
 
 3. React client
-bash
-Copia codice
+
 cd client
 
 # (i node_modules sono già presenti,
