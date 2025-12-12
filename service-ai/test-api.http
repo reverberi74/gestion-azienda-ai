@@ -1,0 +1,27 @@
+### Health
+GET http://127.0.0.1:8001/v1/health
+
+
+### Echo
+POST http://127.0.0.1:8001/v1/echo
+Content-Type: application/json
+
+{
+  "message": "ciao socio"
+}
+
+
+### AI Mock Chat
+POST http://127.0.0.1:8001/v1/ai/mock-chat
+Content-Type: application/json
+
+{
+  "tenant_id": "demo-tenant",
+  "skill": "demo-skill",
+  "query": "Scrivi una frase di test per il cervello AI mock.",
+  "locale": "it-IT",
+  "metadata": {
+    "source": "rest-client",
+    "note": "prima prova mock-chat"
+  }
+}

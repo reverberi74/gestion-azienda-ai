@@ -1,0 +1,32 @@
+# --- Node / React ---
+client/node_modules/
+client/dist/
+client/.vite/
+
+# --- Laravel ---
+server/vendor/
+server/node_modules/
+server/storage/
+server/bootstrap/cache/
+server/public/storage/
+
+# --- Python service-ai ---
+service-ai/.venv/
+service-ai/**/__pycache__/
+service-ai/.pytest_cache/
+service-ai/.mypy_cache/
+
+# --- Env & secrets ---
+**/.env
+.env
+.env.*.local
+
+# --- Log / cache vari ---
+*.log
+*.cache
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
