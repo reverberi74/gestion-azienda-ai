@@ -13,6 +13,9 @@ class Settings(BaseSettings):
     HOST: str = "127.0.0.1"
     PORT: int = 8001
     DEBUG: bool = True
+    
+    # === Internal security (Laravel -> service-ai) ===
+    AI_INTERNAL_TOKEN: str = "dev-ai-internal-2025-12"
 
     # === CORS / Frontend ===
     # Nel .env è una stringa separata da virgole.
@@ -46,3 +49,5 @@ def get_settings() -> Settings:
     Restituisce un'unica istanza di Settings (cached).
     """
     return Settings()
+
+
