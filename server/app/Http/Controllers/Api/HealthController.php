@@ -46,7 +46,7 @@ class HealthController extends Controller
         } catch (\Throwable $e) {
             $result['service_ai'] = [
                 'status' => 'down',
-                'error'  => $e->getMessage(), // in prod poi possiamo “pulire” il messaggio
+                'error'  => $e->getMessage(),
             ];
         }
 
