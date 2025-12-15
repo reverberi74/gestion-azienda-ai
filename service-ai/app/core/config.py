@@ -13,9 +13,20 @@ class Settings(BaseSettings):
     HOST: str = "127.0.0.1"
     PORT: int = 8001
     DEBUG: bool = True
-    
+
     # === Internal security (Laravel -> service-ai) ===
     AI_INTERNAL_TOKEN: str = "dev-ai-internal-2025-12"
+
+    # === Provider: OpenAI (API scenario) ===
+    # NB: lasciare vuoto in repo; valorizzare solo in service-ai/.env locale/ambiente
+    OPENAI_API_KEY: str = ""
+    OPENAI_MODEL: str = "gpt-4.1-mini"
+    OPENAI_BASE_URL: str = "https://api.openai.com/v1"
+    OPENAI_TIMEOUT_SEC: int = 20
+
+    # Defaults (possono essere override via metadata.options dal client)
+    OPENAI_TEMPERATURE: float = 0.2
+    OPENAI_MAX_OUTPUT_TOKENS: int = 280
 
     # === CORS / Frontend ===
     # Nel .env è una stringa separata da virgole.
@@ -49,5 +60,3 @@ def get_settings() -> Settings:
     Restituisce un'unica istanza di Settings (cached).
     """
     return Settings()
-
-
